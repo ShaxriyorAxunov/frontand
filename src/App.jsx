@@ -120,7 +120,7 @@ function App() {
             <b>{car.brand} {car.model} — {car.year}</b>
             <div>
               <button onClick={() => handleEdit(car)}>Tahrirlash</button>
-              {/* <button className="cancel" onClick={() => handleDelete(car.id)}>O'chirish</button> */}
+              <button className="cancel" onClick={() => handleDelete(car.id)}>O'chirish</button>
             </div>
           </div>
         ))}
