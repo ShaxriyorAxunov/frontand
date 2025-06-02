@@ -16,7 +16,7 @@ function App() {
 
   const fetchCars = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/cars");
+      const res = await axios.get("https://bacend-zxkl.onrender.com/cars");
       setCars(res.data);
     } catch (err) {
       console.error("Xatolik: ", err);
@@ -46,11 +46,11 @@ function App() {
 
     try {
       if (editId) {
-        await axios.put(`http://localhost:5000/cars/${editId}`, formData, {
+        await axios.put(`https://bacend-zxkl.onrender.com/cars/${editId}`, formData, {
           headers: { "Content-Type": "multipart/form-data" },
         });
       } else {
-        await axios.post("http://localhost:5000/cars", formData, {
+        await axios.post("https://bacend-zxkl.onrender.com/cars", formData, {
           headers: { "Content-Type": "multipart/form-data" },
         });
       }
@@ -64,7 +64,7 @@ function App() {
   const handleDelete = async (id) => {
     if (window.confirm("Rostdan o'chirmoqchimisiz?")) {
       try {
-        await axios.delete(`http://localhost:5000/cars/${id}`);
+        await axios.delete(`https://bacend-zxkl.onrender.com/cars/${id}`);
         fetchCars();
       } catch (err) {
         console.error("Xatolik: ", err);
